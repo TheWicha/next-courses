@@ -1,6 +1,6 @@
-import CoursePreview from "./CoursePreview";
+import CoursePreview from "../../../../components/ui/CoursePreview";
 
-const CourseVideoDescription = ({ chapters, data }) => {
+const ChapterListFacade = ({ chapters, data }) => {
   const lessonsChapters = chapters?.lessons?.list?.chapter;
 
   return (
@@ -14,4 +14,4 @@ const CourseVideoDescription = ({ chapters, data }) => {
   );
 };
 
-export default CourseVideoDescription;
+export default ChapterListFacade;

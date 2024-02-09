@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import useTrimmedText from "../../utils/useTrimText";
+import useTrimmedText from "utils/useTrimText";
 
 const CourseListItem = ({ course }) => {
   const trimmedText = useTrimmedText({
