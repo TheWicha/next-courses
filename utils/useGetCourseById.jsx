@@ -1,24 +1,26 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { getCourseById } from "./hygraphApi";
 
 const useGetLessons = ({ data }) => {
-  const [lessons, setLessons] = useState(null);
-  const [error, setError] = useState(null);
+  const [state, setState] = useState({
+    lessons: null,
+    error: null,
+  });
 
   const getAllLessons = useCallback(async () => {
     try {
       const res = await getCourseById({ id: data });
-      setLessons(res);
+      setState((prevState) => ({ ...prevState, lessons: res }));
     } catch (err) {
-      setError(err);
+      setState((prevState) => ({ ...prevState, error: err }));
     }
-  }, []);
+  }, [data]);
 
   useEffect(() => {
     getAllLessons();
   }, [getAllLessons]);
 
-  return useMemo(() => ({ lessons, error }), [lessons, error]);
+  return state;
 };
 
 export default useGetLessons;
