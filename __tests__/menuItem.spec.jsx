@@ -1,4 +1,4 @@
-import { menuItems } from "../app/_utils/navItems";
+import { menuItems } from "../utils/navItems";
 import { BadgeIcon, BookOpen, GraduationCap } from "lucide-react";
 
 test("menuItems has correct length and properties", () => {

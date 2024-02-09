@@ -1,5 +1,5 @@
 import { render, waitFor } from "@testing-library/react";
-import { getAllCourseLists } from "../app/_utils/hygraphApi";
+import { getAllCourseLists } from "../utils/hygraphApi";
 
 const mockList = [
   {

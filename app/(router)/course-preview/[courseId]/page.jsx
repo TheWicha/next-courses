@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import CourseVideoDescription from "@/components/ui/CourseVideoDescription";
-import useGetLessons from "app/_utils/useGetCourseById";
+import useGetLessons from "utils/useGetCourseById";
 
 const CoursePreviev = ({ params }) => {
   const chapters = useGetLessons({ data: params.courseId });
