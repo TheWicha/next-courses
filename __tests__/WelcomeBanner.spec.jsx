@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import WelcomeBanner from "../app/(router)/courses/_components/WelcomeBanner";
+import WelcomeBanner from "../components/ui/WelcomeBanner";
 
 test("renders welcome banner", () => {
   render(<WelcomeBanner />);

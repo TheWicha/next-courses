@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect, useCallback, useMemo } from "react";
-import CourseList from "./CourseList";
-import useGetCourses from "../../app/_utils/useGetCourses";
-import useCourseFilter from "../../app/_utils/useCourseFilter";
+import CourseList from "../../../components/ui/CourseList";
+import useGetCourses from "../../_utils/useGetCourses";
+import useCourseFilter from "../../_utils/useCourseFilter";
 
 const CourseListFacade = () => {
   const { courses } = useGetCourses();

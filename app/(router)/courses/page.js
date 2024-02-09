@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import WelcomeBanner from "app/(router)/courses/_components/WelcomeBanner";
-import CourseListFacade from "@/components/ui/CourseListFacade";
+import WelcomeBanner from "@/components/ui/WelcomeBanner";
+import CourseListFacade from "app/(router)/courses/CourseListFacade";
 import SideBanner from "@/components/ui/SideBanner";
 import useGetBanner from "../../_utils/useGetBanner";
 
