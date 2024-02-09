@@ -1,5 +1,5 @@
 import React from "react";
-import { menuItems } from "../../app/_utils/navItems";
+import { menuItems } from "../../utils/navItems";
 import Link from "next/link";
 import { clsx } from "clsx";
 
