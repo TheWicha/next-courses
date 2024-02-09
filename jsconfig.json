@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./*"]
+      "@/components/*": ["components/*"]
     }
   }
 }
