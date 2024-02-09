@@ -1,6 +1,6 @@
-import useGetCourses from "../app/_utils/useGetCourses";
+import useGetCourses from "../utils/useGetCourses";
 import { renderHook, act, waitFor } from "@testing-library/react";
-import { getAllCourseLists } from "../app/_utils/hygraphApi";
+import { getAllCourseLists } from "../utils/hygraphApi";
 
 jest.mock("../app/_utils/GlobalApi", () => ({
   getAllCourseLists: jest.fn(),

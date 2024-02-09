@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import useGetLessons from "app/_utils/useGetCourseById";
+import useGetLessons from "utils/useGetCourseById";
 import Image from "next/image";
 import Skeleton from "@/components/ui/Skeleton";
 
