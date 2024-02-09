@@ -4,9 +4,11 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/lib/accordion";
+
+} from "../../../components/ui/lib/accordion";
 import Link from "next/link";
-import { Button } from "@/components/ui/lib/button";
+import { Button } from "../../../components/ui/lib/button";
+
 import { CoursePreviewType } from "./coursePreviewType";
 
 const CoursePreview: React.FC<CoursePreviewType> = ({ item, index, data }) => {
