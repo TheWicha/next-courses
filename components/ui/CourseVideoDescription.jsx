@@ -1,4 +1,4 @@
-import CoursePreview from "../../app/(router)/course-preview/[courseId]/_components/CoursePreview";
+import CoursePreview from "./CoursePreview";
 
 const CourseVideoDescription = ({ chapters, data }) => {
   const lessonsChapters = chapters?.lessons?.list?.chapter;
