@@ -10,6 +10,7 @@ const useGetLessons = ({ data }) => {
   const getAllLessons = useCallback(async () => {
     try {
       const res = await getCourseById({ id: data });
+
       setState((prevState) => ({ ...prevState, lessons: res }));
     } catch (err) {
       setState((prevState) => ({ ...prevState, error: err }));
@@ -21,6 +22,7 @@ const useGetLessons = ({ data }) => {
   }, [getAllLessons]);
 
   return state;
+
 };
 
 export default useGetLessons;

@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
+
 import useGetLessons from "../../../../../utils/useGetCourseById";
 import Image from "next/image";
 import Skeleton from "../../../../..//components/ui/Skeleton/Skeleton";
@@ -12,6 +13,7 @@ const CoursePreviev = ({ params }) => {
   }
 
   let chapter = findChapterById(lessons, params.courseLesson);
+
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 p-5 gap-3">

@@ -1,5 +1,7 @@
 import React from "react";
+
 import { menuItems } from "../../..//utils/navItems";
+
 import Link from "next/link";
 import { clsx } from "clsx";
 import { NavItemsType } from "./navItemsTypes";
