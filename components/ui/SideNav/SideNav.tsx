@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import NavItems from "../NavItems/NavItems";
+import { NavItemsType } from "./sideNavType";
 
-import NavItems from "./NavItems";
-
-const SideNav = ({ path }) => {
+const SideNav: React.FC<NavItemsType> = ({ path }) => {
   return (
     <div className="p-5 bg-white shadow-sm border h-screen ">
       <div className="flex flex-col items-center">
@@ -14,7 +14,6 @@ const SideNav = ({ path }) => {
           alt="logo"
           width={170}
           height={150}
-          // style={{ width: "170px", height: "auto" }}
         />
       </div>
       <hr className="mt-7" />
