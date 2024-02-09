@@ -12,7 +12,9 @@ const WelcomeBanner = () => {
       />
       <div>
         <h2 className="font-bold text-[22px] mb-0">Welcome to our academy!</h2>
-        <h3 className="text-gray-500">Lorem ipsum dolor, sit amet elit.</h3>
+        <h3 className="text-gray-500">
+          Join our tribe of over 600,000 photographers worldwide.
+        </h3>
       </div>
     </div>
   );

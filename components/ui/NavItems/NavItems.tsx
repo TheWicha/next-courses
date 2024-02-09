@@ -2,8 +2,9 @@ import React from "react";
 import { menuItems } from "utils/navItems";
 import Link from "next/link";
 import { clsx } from "clsx";
+import { NavItemsType } from "./navItemsTypes";
 
-const NavItems = ({ path }) => {
+const NavItems: React.FC<NavItemsType> = ({ path }) => {
   const listItems = menuItems.map((item, index) => (
     <Link href={item.link} key={index}>
       <div

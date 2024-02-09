@@ -2,7 +2,7 @@
 import React from "react";
 import WelcomeBanner from "@/components/ui/WelcomeBanner";
 import CourseListFacade from "app/(router)/courses/CourseListFacade";
-import SideBanner from "@/components/ui/SideBanner";
+import SideBanner from "@/components/ui/SideBanner/SideBanner";
 import useGetBanner from "../../../utils/useGetBanner";
 
 const Courses = () => {

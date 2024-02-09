@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import CourseListItem from "./CourseListItem";
+import CourseListItem from "../CourseListItem/CourseListItem";
 import {
   Select,
   SelectContent,
@@ -9,9 +9,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/lib/select";
-import Skeleton from "./Skeleton";
+import Skeleton from "../Skeleton/Skeleton";
+import { CourseListPropsType } from "./CourseListTypes";
 
-const CourseList = ({ courses, handleChange, coursesNumber }) => {
+const CourseList: React.FC<CourseListPropsType> = ({
+  courses,
+  handleChange,
+  coursesNumber,
+}) => {
   return (
     <div className="p-5 bg-white rounded-lg mt-5">
       <div className="flex items-center justify-between">

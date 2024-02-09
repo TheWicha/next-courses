@@ -7,8 +7,9 @@ import {
 } from "@/components/ui/lib/accordion";
 import Link from "next/link";
 import { Button } from "@/components/ui/lib/button";
+import { CoursePreviewType } from "./coursePreviewType";
 
-const CoursePreview = ({ item, index, data }) => {
+const CoursePreview: React.FC<CoursePreviewType> = ({ item, index, data }) => {
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value="item-1">
@@ -20,9 +21,9 @@ const CoursePreview = ({ item, index, data }) => {
         </AccordionTrigger>
         <AccordionContent className="flex flex-col items-start mt-4">
           <div>{item.shortDesc}</div>
-          <Link href={`${data}/${item.id}`}>
-            <Button className=" mt-4">Start Lesson </Button>
-          </Link>
+          <Button className="mt-4">
+            <Link href={`${data}/${item.id}`}>Start lesson</Link>
+          </Button>
         </AccordionContent>
       </AccordionItem>
     </Accordion>

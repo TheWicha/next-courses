@@ -2,10 +2,10 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import Skeleton from "./Skeleton";
-import { clsx } from "clsx";
+import Skeleton from "../Skeleton/Skeleton";
+import { BannersType } from "./SideBannerTypes";
 
-const SideBanner = ({ banner }) => {
+const SideBanner: React.FC<BannersType> = ({ banner }) => {
   const banners =
     banner &&
     banner?.map((item, index) => (
@@ -15,13 +15,14 @@ const SideBanner = ({ banner }) => {
           width={250}
           height={220}
           className="rounded-xl cursor-pointer border"
+          alt={`${item.name} `}
         />
       </Link>
     ));
 
   return (
     <div className="flex flex-col gap-4 w-[250px]">
-      {banner ? banners : <Skeleton variant="xsm" coursesNumber={3} />}
+      {banner ? banners : <Skeleton variant="sm" coursesNumber={3} />}
     </div>
   );
 };

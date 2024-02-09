@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import useGetLessons from "utils/useGetCourseById";
 import Image from "next/image";
-import Skeleton from "@/components/ui/Skeleton";
+import Skeleton from "@/components/ui/Skeleton/Skeleton";
 
 const CoursePreviev = ({ params }) => {
   const chapters = useGetLessons({ data: params.courseId });

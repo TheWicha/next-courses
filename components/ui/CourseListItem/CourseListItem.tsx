@@ -1,8 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import useTrimmedText from "utils/useTrimText";
+import { CourseItemType } from "./courseItemType";
 
-const CourseListItem = ({ course }) => {
+const CourseListItem: React.FC<CourseItemType> = ({ course }) => {
+
   const trimmedText = useTrimmedText({
     text: course?.description,
     maxLength: 125,
