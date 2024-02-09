@@ -10,11 +10,11 @@ const SideNav = ({ path }) => {
       <div className="flex flex-col items-center">
         <Image
           priority
-          src="/logo-no-background.svg"
+          src="/logo-no-background.png"
           alt="logo"
-          width={"0"}
-          height="0"
-          style={{ width: "170px", height: "auto" }}
+          width={170}
+          height={150}
+          // style={{ width: "170px", height: "auto" }}
         />
       </div>
       <hr className="mt-7" />
