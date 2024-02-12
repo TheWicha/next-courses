@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 
-import CourseList from "../../../components/ui/CourseList/CourseList";
-import useGetCourses from "../../../utils/useGetCourses";
-import useCourseFilter from "../../../utils/useCourseFilter";
-import useCourseCount from "../../../utils/useCourseCount";
+import CourseList from "@/components/ui/CourseList/CourseList";
+import useGetCourses from "@/utils/useGetCourses";
+import useCourseFilter from "@/utils/useCourseFilter";
+import useCourseCount from "@/utils/useCourseCount";
 
 
 const CourseListFacade = () => {

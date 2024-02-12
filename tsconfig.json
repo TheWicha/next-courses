@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/utils/*": ["utils/*"],
+      "@/components/*": ["components/*"]
+    },
     "lib": [
       "dom",
       "dom.iterable",

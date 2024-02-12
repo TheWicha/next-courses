@@ -1,4 +1,4 @@
-import CoursePreview from "../../../../components/ui/CoursePreview/CoursePreview";
+import CoursePreview from "@/components/ui/CoursePreview/CoursePreview";
 import { ChapterListFacadeProps } from "./ChapterListFacadeTypes";
 
 const ChapterListFacade: React.FC<ChapterListFacadeProps> = ({

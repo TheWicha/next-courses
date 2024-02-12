@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import CourseList from "../components/ui/CourseList/CourseList";
+import CourseList from "@/components/ui/CourseList/CourseList";
 import "@testing-library/jest-dom";
-import useGetCourses from "../utils/useGetCourses";
+import useGetCourses from "@/utils/useGetCourses";
 
 const mockCourses = [
   {

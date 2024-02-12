@@ -1,4 +1,3 @@
-import { render, waitFor } from "@testing-library/react";
 import { getAllCourseLists } from "../utils/graphqlQueries";
 
 const mockList = [

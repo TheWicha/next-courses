@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import SideNav from "../../components/ui/SideNav/SideNav";
-import Header from "../../components/ui/Header";
+import SideNav from "@/components/ui/SideNav/SideNav";
+import Header from "@/components/ui/Header";
 import { usePathname } from "next/navigation";
 import { QueryClient, QueryClientProvider } from "react-query";
 

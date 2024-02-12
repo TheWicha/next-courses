@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useMemo } from "react";
-import useGetLessonById from "../../../../../utils/useGetLessonById";
+import useGetLessonById from "@/utils/useGetLessonById";
 import Image from "next/image";
-import Skeleton from "../../../../..//components/ui/Skeleton/Skeleton";
+import Skeleton from "@/components/ui/Skeleton/Skeleton";
 
 const CoursePreviev = ({ params }) => {
   const chapter = useGetLessonById({

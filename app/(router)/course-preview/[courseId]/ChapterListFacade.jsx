@@ -1,4 +1,4 @@
-import CoursePreview from "../../../../components/ui/CoursePreview/CoursePreview";
+import CoursePreview from "@/components/ui/CoursePreview/CoursePreview";
 
 const ChapterListFacade = ({ chapters, data }) => {
   const lessonsChapters = chapters?.lessons?.list?.chapter;
