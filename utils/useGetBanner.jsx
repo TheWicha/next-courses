@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { sideBanners } from "./hygraphApi";
+import { sideBanners } from "./graphqlQueries";
 import { useGQLQuery } from "./useGQLQuery";
 
 const useGetBanner = () => {

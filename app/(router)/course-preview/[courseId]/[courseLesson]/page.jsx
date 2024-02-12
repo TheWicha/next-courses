@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useMemo } from "react";
 import useGetLessonById from "../../../../../utils/useGetLessonById";
 import Image from "next/image";
 import Skeleton from "../../../../..//components/ui/Skeleton/Skeleton";
