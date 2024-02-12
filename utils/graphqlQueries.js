@@ -1,9 +1,7 @@
 import { gql } from "graphql-request";
 
-const apiKey = `https://api-eu-west-2.hygraph.com/v2/${process.env.NEXT_PUBLIC_HYGRAPH_API_KEY}/master`;
-
 export const coursesById = gql`
-  query MyQuery($slug: String!) {
+  query courseById($slug: String!) {
     list(where: { slug: $slug }) {
       id
       banner {
@@ -26,7 +24,7 @@ export const coursesById = gql`
 `;
 
 export const sideBanners = gql`
-  query getBanner {
+  query allBanner {
     sideBanners {
       banner {
         url
