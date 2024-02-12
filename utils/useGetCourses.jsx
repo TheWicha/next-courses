@@ -1,24 +1,11 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
-import { getAllCourseLists } from "./hygraphApi";
+import { useMemo } from "react";
+import { allCourses} from "./hygraphApi";
+ import { useGQLQuery } from "./useGQLQuery";
 
 const useGetCourses = () => {
-  const [courses, setCourses] = useState(null);
-  const [error, setError] = useState(null);
+  const { data, error } = useGQLQuery("allCourses", allCourses);
 
-  const getAllCourses = useCallback(async () => {
-    try {
-      const res = await getAllCourseLists();
-      setCourses(res);
-    } catch (err) {
-      setError(err);
-    }
-  }, []);
-
-  useEffect(() => {
-    getAllCourses();
-  }, [getAllCourses]);
-
-  return useMemo(() => ({ courses, error }), [courses, error]);
+  return useMemo(() => ({ courses: data, error }), [data, error]);
 };
 
 export default useGetCourses;

@@ -1,28 +1,12 @@
-import { useState, useEffect, useCallback } from "react";
-import { getCourseById } from "./hygraphApi";
+import { coursesById } from "./hygraphApi";
+import { useGQLQuery } from "./useGQLQuery";
 
-const useGetLessons = ({ data }) => {
-  const [state, setState] = useState({
-    lessons: null,
-    error: null,
+const useGetLessons = ({ slug }) => {
+  const { data, error } = useGQLQuery("coursesById", coursesById, {
+    slug,
   });
 
-  const getAllLessons = useCallback(async () => {
-    try {
-      const res = await getCourseById({ id: data });
-
-      setState((prevState) => ({ ...prevState, lessons: res }));
-    } catch (err) {
-      setState((prevState) => ({ ...prevState, error: err }));
-    }
-  }, [data]);
-
-  useEffect(() => {
-    getAllLessons();
-  }, [getAllLessons]);
-
-  return state;
-
+  return { data, error };
 };
 
 export default useGetLessons;

@@ -16,7 +16,7 @@ const Courses = () => {
         <CourseListFacade />
       </div>
       <div className="hidden col-span-1 p-4 bg-white rounded-xl md:flex justify-center gap-4">
-        <SideBanner banner={banner} />
+        <SideBanner banner={banner?.sideBanners} />
       </div>
     </div>
   );
