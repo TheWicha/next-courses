@@ -14,6 +14,7 @@ interface Banner {
 }
 
 interface Lessons {
+  chapter: any;
   list: any;
   lessons: {
     id: string;

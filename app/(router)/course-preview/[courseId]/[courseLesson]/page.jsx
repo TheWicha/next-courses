@@ -1,17 +1,14 @@
 "use client";
-import React, { useEffect } from "react";
-import useGetLessons from "../../../../../utils/useGetCourseById";
+import React from "react";
+import useGetLessonById from "../../../../../utils/useGetLessonById";
 import Image from "next/image";
 import Skeleton from "../../../../..//components/ui/Skeleton/Skeleton";
 
 const CoursePreviev = ({ params }) => {
-  const { lessons } = useGetLessons({ data: params.courseId });
-
-  function findChapterById(lessons, id) {
-    return lessons?.list?.chapter?.find((chapter) => chapter.id === id);
-  }
-
-  let chapter = findChapterById(lessons, params.courseLesson);
+  const chapter = useGetLessonById({
+    slug: params.courseId,
+    id: params.courseLesson,
+  });
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 p-5 gap-3">

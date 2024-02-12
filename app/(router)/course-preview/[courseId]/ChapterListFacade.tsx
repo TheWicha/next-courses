@@ -5,8 +5,7 @@ const ChapterListFacade: React.FC<ChapterListFacadeProps> = ({
   chapters,
   data,
 }) => {
-  const lessonsChapters = chapters?.list?.chapter;
-
+  const lessonsChapters = chapters?.chapter;
   return (
     <div className="flex flex-col gap-4">
       {lessonsChapters?.map((item, index) => (

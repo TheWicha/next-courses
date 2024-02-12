@@ -2,13 +2,6 @@
 import Link from "next/link";
 import React from "react";
 import CourseListItem from "../CourseListItem/CourseListItem";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/lib/select";
 import Skeleton from "../Skeleton/Skeleton";
 import { CourseListPropsType } from "./CourseListTypes";
 
