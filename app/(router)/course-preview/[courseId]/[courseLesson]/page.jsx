@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import useGetLessonById from "../../../../../utils/useGetLessonById";
 import Image from "next/image";
@@ -9,6 +10,7 @@ const CoursePreviev = ({ params }) => {
     slug: params.courseId,
     id: params.courseLesson,
   });
+
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 p-5 gap-3">
