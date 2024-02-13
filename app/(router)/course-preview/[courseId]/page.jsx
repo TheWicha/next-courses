@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-
-import ChapterListFacade from "../../course-preview/[courseId]/ChapterListFacade";
+import ChapterListFacade from "./[courseLesson]/ChapterListFacade/ChapterListFacade";
+import CourseEnrollSection from "./[courseLesson]/CourseEnrollSection/CourseEnrollSection";
 import useGetLessons from "@/utils/useGetCourseById";
 
 const CoursePreview = ({ params }) => {
@@ -11,7 +11,9 @@ const CoursePreview = ({ params }) => {
       <div className="col-span-2 bg-white p-3 rounded-xl ">
         <ChapterListFacade chapters={data?.list} data={params.courseId} />
       </div>
-      <div></div>
+      <div>
+        <CourseEnrollSection />
+      </div>
     </div>
   );
 };
