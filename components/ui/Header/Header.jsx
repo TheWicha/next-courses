@@ -1,8 +1,11 @@
-import { Button } from "@/components/ui/lib/button";
 import { BellDot, Search } from "lucide-react";
 import React from "react";
+import HeaderButtonLog from "@/components/ui/HeaderButton/HeaderButtonLog";
+import HeaderButtonUnlog from "@/components/ui/HeaderButton/HeaderButtonUnlog";
 
-const Header = () => {
+const Header = ({ user }) => {
+  const button = user.isSignedIn ? <HeaderButtonLog /> : <HeaderButtonUnlog />;
+
   return (
     <div className="p-4 bg-white flex justify-between">
       <div className="flex items-center gap-2 border rounded-sm">
@@ -15,7 +18,7 @@ const Header = () => {
       </div>
       <div className="flex items-center gap-4">
         <BellDot className="text-gray-500" />
-        <Button>Get Started</Button>
+        {button}
       </div>
     </div>
   );

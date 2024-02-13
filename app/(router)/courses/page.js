@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
-import WelcomeBanner from "@/components/ui/WelcomeBanner";
+import WelcomeBanner from "@/components/ui/WelcomeBanner/WelcomeBanner";
 import CourseListFacade from "./CourseListFacade";
 import SideBanner from "@/components/ui/SideBanner/SideBanner";
-
 import useGetBanner from "@/utils/useGetBanner";
 
 const Courses = () => {

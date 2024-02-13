@@ -1,6 +1,12 @@
-import { BadgeCheck, LayoutGrid, GraduationCap, BookOpen } from "lucide-react";
+import {
+  BadgeCheck,
+  GraduationCap,
+  BookOpen,
+  ShoppingCart,
+  LayoutDashboard,
+} from "lucide-react";
 
-export const navItems = [
+export const menuItems = [
   {
     id: 1,
     name: "All Courses",
@@ -9,18 +15,24 @@ export const navItems = [
   },
   {
     id: 2,
+    name: "Dashboard",
+    icon: LayoutDashboard,
+    link: "/dashboard",
+  },
+  {
+    id: 3,
     name: "Membership",
     icon: BadgeCheck,
     link: "/membership",
   },
   {
-    id: 3,
+    id: 4,
     name: "Store",
-    icon: LayoutGrid,
+    icon: ShoppingCart,
     link: "/store",
   },
   {
-    id: 4,
+    id: 5,
     name: "Be Instructor",
     icon: GraduationCap,
     link: "/instructor-program",
