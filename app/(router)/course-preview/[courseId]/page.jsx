@@ -4,7 +4,7 @@ import React from "react";
 import ChapterListFacade from "../../course-preview/[courseId]/ChapterListFacade";
 import useGetLessons from "../../../../utils/useGetCourseById";
 
-const CoursePreviev = ({ params }) => {
+const CoursePreview = ({ params }) => {
   const { data } = useGetLessons({ slug: params.courseId });
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 p-5 gap-3">
@@ -16,4 +16,4 @@ const CoursePreviev = ({ params }) => {
   );
 };
 
-export default CoursePreviev;
+export default CoursePreview;
