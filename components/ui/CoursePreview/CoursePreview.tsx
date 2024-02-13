@@ -22,7 +22,12 @@ const CoursePreview: React.FC<CoursePreviewType> = ({ item, index, data }) => {
         </AccordionTrigger>
         <AccordionContent className="flex flex-col items-start mt-4">
           <div>{item.shortDesc}</div>
-          <Button className="mt-4">
+          <Button
+            className="mt-4"
+            variant="secondary"
+            size="small"
+            asChild={true}
+          >
             <Link href={`${data}/${item.id}`}>Start lesson</Link>
           </Button>
         </AccordionContent>
