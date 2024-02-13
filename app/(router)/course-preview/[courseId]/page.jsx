@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import ChapterListFacade from "./[courseLesson]/ChapterListFacade/ChapterListFacade";
-import CourseEnrollSection from "../../../../components/ui/CourseEnrollSection/CourseEnrollSection";
+import CourseEnrollSection from "@/components/ui/CourseEnrollSection/CourseEnrollSection";
 import useGetLessons from "@/utils/useGetCourseById";
 
 const CoursePreview = ({ params }) => {

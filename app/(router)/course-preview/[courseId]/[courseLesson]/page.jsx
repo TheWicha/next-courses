@@ -1,10 +1,7 @@
 "use client";
-
-import React, { useMemo } from "react";
+import React from "react";
 import useGetLessonById from "@/utils/useGetLessonById";
-
 import Skeleton from "@/components/ui/Skeleton/Skeleton";
-import CourseEnrollSection from "../../../../../components/ui/CourseEnrollSection/CourseEnrollSection";
 import CourseLessonWrapper from "@/components/ui/CourseLessonWrapper/CourseLessonWrapper";
 import CourseLesson from "@/components/ui/CourseLesson/CourseLesson";
 

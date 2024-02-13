@@ -11,7 +11,7 @@ const CourseLessonWrapper: React.FC<CourseLessonWrapperType> = ({
         {children}
       </div>
       <div>
-        <CourseEnrollSection />
+        <CourseEnrollSection membership={true} />
       </div>
     </div>
   );
