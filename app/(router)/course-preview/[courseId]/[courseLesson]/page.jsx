@@ -4,13 +4,13 @@ import React, { useMemo } from "react";
 import useGetLessonById from "@/utils/useGetLessonById";
 import Image from "next/image";
 import Skeleton from "@/components/ui/Skeleton/Skeleton";
+import CourseEnrollSection from "./CourseEnrollSection/CourseEnrollSection";
 
 const CoursePreview = ({ params }) => {
   const chapter = useGetLessonById({
     slug: params.courseId,
     id: params.courseLesson,
   });
-
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 p-5 gap-3">
@@ -30,7 +30,9 @@ const CoursePreview = ({ params }) => {
           <Skeleton coursesNumber={1} variant="big" />
         )}
       </div>
-      <div></div>
+      <div>
+        <CourseEnrollSection />
+      </div>
     </div>
   );
 };
