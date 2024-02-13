@@ -4,7 +4,6 @@ import { ChapterListFacadeProps } from "./ChapterListFacadeTypes";
 import { useGQLMutation } from "@/utils/useGQLMutation";
 import { enrollToCourse } from "@/utils/graphqlQueries";
 import { useUser } from "@clerk/nextjs";
-import { useState, useEffect } from "react";
 
 const ChapterListFacade: React.FC<ChapterListFacadeProps> = ({
   chapters,
@@ -15,13 +14,14 @@ const ChapterListFacade: React.FC<ChapterListFacadeProps> = ({
   const userEmail = user?.primaryEmailAddress.emailAddress;
   const createCourseMutation = useGQLMutation(enrollToCourse);
 
-  const handleClick = (item) => {
+  const handleClick = async (item) => {
     const variables = {
       courseId: item.id,
       userEmail: userEmail,
       id: chapters?.id,
     };
-    createCourseMutation.mutate(variables);
+
+    const mutationData = await createCourseMutation.mutateAsync(variables);
   };
 
   return (
