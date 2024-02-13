@@ -19,4 +19,3 @@ const ChapterListFacade: React.FC<ChapterListFacadeProps> = ({
 };
 
 export default ChapterListFacade;
-

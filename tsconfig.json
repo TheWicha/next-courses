@@ -4,7 +4,8 @@
     "paths": {
       "@/utils/*": ["utils/*"],
       "@/components/*": ["components/*"],
-      "@/copy/*": ["copy/*"]
+      "@/copy/*": ["copy/*"],
+      "@/types/*": ["types/*"]
     },
     "lib": [
       "dom",

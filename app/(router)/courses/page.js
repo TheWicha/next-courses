@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-
 import WelcomeBanner from "@/components/ui/WelcomeBanner";
 import CourseListFacade from "./CourseListFacade";
 import SideBanner from "@/components/ui/SideBanner/SideBanner";

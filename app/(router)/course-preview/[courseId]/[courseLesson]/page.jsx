@@ -1,29 +1,18 @@
 "use client";
 import React from "react";
 import useGetLessonById from "@/utils/useGetLessonById";
-import Skeleton from "@/components/ui/Skeleton/Skeleton";
-import CourseLessonWrapper from "@/components/ui/CourseLessonWrapper/CourseLessonWrapper";
-import CourseLesson from "@/components/ui/CourseLesson/CourseLesson";
+import CourseLessonFacade from "./_CourseLessonFacade/CourseLessonFacade";
+import useGetLessons from "@/utils/useGetCourseById";
 
-const CoursePreview = ({ params }) => {
+const CourseChapterPreview = ({ params }) => {
+  const { data } = useGetLessons({ slug: params.courseId });
   const chapter = useGetLessonById({
     slug: params.courseId,
     id: params.courseLesson,
   });
-
-  if (!chapter) {
-    return (
-      <CourseLessonWrapper>
-        <Skeleton coursesNumber={1} variant="big" />
-      </CourseLessonWrapper>
-    );
-  }
-
   return (
-    <CourseLessonWrapper>
-      <CourseLesson chapter={chapter} />
-    </CourseLessonWrapper>
+    <CourseLessonFacade chapter={chapter} chapters={data?.list?.chapter} />
   );
 };
 
-export default CoursePreview;
+export default CourseChapterPreview;

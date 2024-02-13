@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import ChapterListFacade from "./[courseLesson]/ChapterListFacade/ChapterListFacade";
+import ChapterListFacade from "./_ChapterListFacade/ChapterListFacade";
 import CourseEnrollSection from "@/components/ui/CourseEnrollSection/CourseEnrollSection";
 import useGetLessons from "@/utils/useGetCourseById";
 
@@ -12,7 +12,7 @@ const CoursePreview = ({ params }) => {
         <ChapterListFacade chapters={data?.list} data={params.courseId} />
       </div>
       <div>
-        <CourseEnrollSection />
+        <CourseEnrollSection membership={true} />
       </div>
     </div>
   );

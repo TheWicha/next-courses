@@ -1,3 +1,4 @@
+import { Chapter } from "@/types/chapter";
 
 export interface CourseType {
   id: string;
@@ -8,13 +9,7 @@ export interface CourseType {
   slug: string;
   totalChapters: number;
   youtubeUrl: null;
-  chapter: {
-    id: string;
-    name: string;
-    slug: string;
-    yturl: null;
-    shortDesc: string;
-  }[];
+  chapter: Chapter[];
   banner: {
     url: string;
   };

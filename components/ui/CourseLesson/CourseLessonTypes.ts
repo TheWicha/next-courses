@@ -1,12 +1,4 @@
+import { Chapter } from "@/types/chapter";
 export interface CourseLessonType {
-  chapter: {
-    id: string;
-    name: string;
-    yturl: string | null;
-    video: {
-      url: string;
-    };
-    shortDesc: string;
-    slug: string;
-  };
+  chapter: Chapter;
 }
