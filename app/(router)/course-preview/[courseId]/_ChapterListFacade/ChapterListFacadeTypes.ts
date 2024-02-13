@@ -5,6 +5,7 @@ interface Banner {
 }
 
 interface Lessons {
+  id: any;
   chapter: any;
   list: any;
   lessons: {

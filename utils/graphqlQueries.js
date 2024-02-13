@@ -61,3 +61,24 @@ export const allCourses = gql`
     }
   }
 `;
+
+export const enrollToCourse = gql`
+  mutation MyMutation($courseId: String!, $userEmail: String!, $id: ID!) {
+    createUserEnrollCourse(
+      data: {
+        courseId: $courseId
+        userEmail: $userEmail
+        list: { connect: { id: $id } }
+      }
+    ) {
+      id
+    }
+    publishManyUserEnrollCoursesConnection {
+      edges {
+        node {
+          id
+        }
+      }
+    }
+  }
+`;

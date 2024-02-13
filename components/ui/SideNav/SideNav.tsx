@@ -12,8 +12,8 @@ const SideNav: React.FC<NavItemsType> = ({ path }) => {
           priority
           src="/logo-no-background.png"
           alt="logo"
-          width={170}
-          height={150}
+          width={370}
+          height={350}
         />
       </div>
       <hr className="mt-7" />

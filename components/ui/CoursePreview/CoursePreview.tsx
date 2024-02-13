@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -13,7 +13,7 @@ const CoursePreview: React.FC<CoursePreviewType> = ({
   item,
   index,
   data,
-
+  handleClick,
 }) => {
   return (
     <Accordion type="single" collapsible>
@@ -26,7 +26,13 @@ const CoursePreview: React.FC<CoursePreviewType> = ({
         </AccordionTrigger>
         <AccordionContent className="flex flex-col items-start mt-4">
           <div>{item.shortDesc}</div>
-          <Button className="mt-4" variant="default" size="sm" asChild={true}>
+          <Button
+            className="mt-4"
+            variant="default"
+            size="sm"
+            asChild={true}
+            onClick={handleClick}
+          >
             <Link href={`${data}/${item.id}`}>Start lesson</Link>
           </Button>
         </AccordionContent>

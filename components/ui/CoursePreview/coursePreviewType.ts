@@ -4,4 +4,5 @@ export interface CoursePreviewType {
   item: Chapter;
   index: number;
   data: string;
+  handleClick: () => void;
 }
