@@ -5,7 +5,7 @@ import useGetLessonById from "@/utils/useGetLessonById";
 import Image from "next/image";
 import Skeleton from "@/components/ui/Skeleton/Skeleton";
 
-const CoursePreviev = ({ params }) => {
+const CoursePreview = ({ params }) => {
   const chapter = useGetLessonById({
     slug: params.courseId,
     id: params.courseLesson,
@@ -35,4 +35,4 @@ const CoursePreviev = ({ params }) => {
   );
 };
 
-export default CoursePreviev;
+export default CoursePreview;
