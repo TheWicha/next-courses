@@ -2,13 +2,14 @@ import React from "react";
 import { clsx } from "clsx";
 import Link from "next/link";
 import { CourseChaptersListType } from "./CourseChapterListTypes";
+import Skeleton from "../Skeleton/Skeleton";
 
 const CourseChaptersList: React.FC<CourseChaptersListType> = ({
   chapters,
   chapter,
 }) => {
   if (!chapters) {
-    return <div>Loading...</div>;
+    return <Skeleton variant="sm" numberOfSkeletons={1} />;
   }
 
   return (

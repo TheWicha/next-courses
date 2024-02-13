@@ -22,7 +22,7 @@ const SideBanner: React.FC<BannersType> = ({ banner }) => {
 
   return (
     <div className="flex flex-col gap-4 w-[250px]">
-      {banner ? banners : <Skeleton variant="sm" coursesNumber={3} />}
+      {banner ? banners : <Skeleton variant="sm" numberOfSkeletons={3} />}
     </div>
   );
 };

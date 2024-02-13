@@ -40,7 +40,7 @@ const CourseList: React.FC<CourseListPropsType> = ({
             </Link>
           ))
         ) : (
-          <Skeleton coursesNumber={coursesNumber} variant="small" />
+          <Skeleton numberOfSkeletons={coursesNumber} variant="sm" />
         )}
       </div>
     </div>

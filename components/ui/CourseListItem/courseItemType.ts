@@ -10,9 +10,9 @@ export interface CourseItemType {
     slug: string;
     totalChapters: number;
     youtubeUrl: null;
-    chapter: Chapter;
-  }[];
-  banner: {
-    url: string;
+    chapter: Chapter[];
+    banner: {
+      url: string;
+    };
   };
 }

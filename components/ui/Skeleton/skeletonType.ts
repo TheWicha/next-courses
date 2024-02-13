@@ -1,4 +1,4 @@
 export interface SkeletonPropsType {
-    coursesNumber: number,
-    variant: 'sm' | "small" | 'big',
+  numberOfSkeletons: number;
+  variant: "sm" | "md" | "big";
 }

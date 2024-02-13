@@ -7,7 +7,7 @@ const CourseLessonFacade = ({ chapter, chapters }) => {
   if (!chapter) {
     return (
       <CourseLessonWrapper>
-        <Skeleton coursesNumber={1} variant="big" />
+        <Skeleton numberOfSkeletons={1} variant="big" />
       </CourseLessonWrapper>
     );
   }
