@@ -6,6 +6,7 @@ const ChapterListFacade: React.FC<ChapterListFacadeProps> = ({
   data,
 }) => {
   const lessonsChapters = chapters?.chapter;
+
   return (
     <div className="flex flex-col gap-4">
       {lessonsChapters?.map((item, index) => (

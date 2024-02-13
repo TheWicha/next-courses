@@ -15,16 +15,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-  // const getAllLessons = useCallback(async () => {
-  //   try {
-  //     const res = await getCourseById({ id });
-  //     setState((prevState) => ({ ...prevState, lessons: res }));
-  //   } catch (err) {
-  //     setState((prevState) => ({ ...prevState, error: err }));
-  //   }
-  // }, [data]);
-
-  // useEffect(() => {
-  //   getAllLessons();
-  // }, [getAllLessons]);

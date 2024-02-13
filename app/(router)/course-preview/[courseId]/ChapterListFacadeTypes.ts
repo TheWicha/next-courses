@@ -25,5 +25,5 @@ interface Lessons {
 
 export interface ChapterListFacadeProps {
   chapters: Lessons;
-  data: any; // You can replace 'any' with a more specific type if needed
+  data: string;
 }

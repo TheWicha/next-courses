@@ -2,7 +2,7 @@
 import React from "react";
 
 import ChapterListFacade from "../../course-preview/[courseId]/ChapterListFacade";
-import useGetLessons from "../../../../utils/useGetCourseById";
+import useGetLessons from "@/utils/useGetCourseById";
 
 const CoursePreview = ({ params }) => {
   const { data } = useGetLessons({ slug: params.courseId });
