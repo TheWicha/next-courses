@@ -4,10 +4,9 @@ import useTrimmedText from "../../../utils/useTrimText";
 import { CourseItemType } from "./courseItemType";
 
 const CourseListItem: React.FC<CourseItemType> = ({ course }) => {
-
   const trimmedText = useTrimmedText({
     text: course?.description,
-    maxLength: 125,
+    maxLength: 120,
   });
 
   return (
