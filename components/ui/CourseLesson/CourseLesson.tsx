@@ -8,9 +8,9 @@ const CourseLesson: React.FC<CourseLessonType> = ({ chapter }) => {
       <h2 className="p-4 font-bold">{chapter?.name}</h2>
       <Image
         src={chapter?.video?.url}
-        width={500}
+        width={700}
         height={330}
-        className="m-3"
+        className="p-3"
         alt="video player placeholder"
       />
       <div className="p-5">

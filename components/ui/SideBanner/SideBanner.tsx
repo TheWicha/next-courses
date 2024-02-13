@@ -20,11 +20,14 @@ const SideBanner: React.FC<BannersType> = ({ banner }) => {
       </Link>
     ));
 
-  return (
-    <div className="flex flex-col gap-4 w-[250px]">
-      {banner ? banners : <Skeleton variant="sm" numberOfSkeletons={3} />}
-    </div>
-  );
+  if (!banner) {
+    return (
+      <div className="flex flex-col gap-4 w-[250px]">
+        {<Skeleton variant="sm" numberOfSkeletons={3} />}
+      </div>
+    );
+  }
+  return <div className="flex flex-col gap-4 w-[250px]">{banners}</div>;
 };
 
 export default SideBanner;

@@ -3,6 +3,8 @@ import { clsx } from "clsx";
 import Link from "next/link";
 import { CourseChaptersListType } from "./CourseChapterListTypes";
 import Skeleton from "../Skeleton/Skeleton";
+import Image from "next/image";
+import { Lock } from "lucide-react";
 
 const CourseChaptersList: React.FC<CourseChaptersListType> = ({
   chapters,
@@ -16,14 +18,22 @@ const CourseChaptersList: React.FC<CourseChaptersListType> = ({
     <div className="p-3 bg-white rounded-sm">
       <h2 className="font-semibold">Content</h2>
       {chapters.map((item, index) => (
-        <Link href={item.id} key={index}>
+        <Link
+          href={item.id}
+          key={index}
+          className="flex items-center border rounded-sm mt-2 p-1 hover:bg-gray-100"
+        >
           <div
-            className={clsx("cursor-pointer p-2", {
-              "font-bold text-violet-600": chapter?.name === item?.name,
-            })}
+            className={clsx(
+              "cursor-pointer p-2 text-[13px] lg:text-[16px] font-light ",
+              {
+                "font-bold text-violet-600": chapter?.name === item?.name,
+              }
+            )}
           >
-            {item.name}
+            {index + 1}. {item.name}
           </div>
+          <Lock className="w-4 h-4" />
         </Link>
       ))}
     </div>
