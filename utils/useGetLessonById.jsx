@@ -7,9 +7,7 @@ const useGetLessonById = ({ slug, id }) => {
     return lessons?.list?.chapter?.find((chapter) => chapter.id === id);
   }
 
-  const result = findChapterById(data, id);
-
-  return result;
+  return findChapterById(data, id);
 };
 
 export default useGetLessonById;
