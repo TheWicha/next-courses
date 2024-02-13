@@ -22,7 +22,7 @@ const layout = ({ children }) => {
         <SideNav path={path} />
       </div>
       <div className="sm:ml-64">
-        <Header user={{ user, isLoaded, isSignedIn }} />
+        <Header user={{ isLoaded, isSignedIn }} />
         {children}
       </div>
     </QueryClientProvider>

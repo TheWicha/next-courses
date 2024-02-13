@@ -3,8 +3,7 @@ import { clsx } from "clsx";
 import Link from "next/link";
 import { CourseChaptersListType } from "./CourseChapterListTypes";
 import Skeleton from "../Skeleton/Skeleton";
-import Image from "next/image";
-import { Lock } from "lucide-react";
+import { Lock, Play } from "lucide-react";
 
 const CourseChaptersList: React.FC<CourseChaptersListType> = ({
   chapters,
@@ -33,7 +32,11 @@ const CourseChaptersList: React.FC<CourseChaptersListType> = ({
           >
             {index + 1}. {item.name}
           </div>
-          <Lock className="w-4 h-4" />
+          {index !== 0 ? (
+            <Lock className="w-4 h-4" />
+          ) : (
+            <Play className="w-4 h-4" />
+          )}
         </Link>
       ))}
     </div>
