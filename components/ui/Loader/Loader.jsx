@@ -1,11 +1,11 @@
 import React from "react";
 
-const LoadingSpinner = () => {
+const Loader = () => {
   return (
-    <div role="status" className="flex justify-center items-center h-screen">
+    <div role="status" className="flex h-screen justify-center items-center">
       <svg
         aria-hidden="true"
-        className="w-20 text-gray-200 animate-spin dark:textLoadingSpinner';gray-600 fill-blue-600"
+        class="w-20 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -19,9 +19,9 @@ const LoadingSpinner = () => {
           fill="currentFill"
         />
       </svg>
-      <span className="sr-only">Loading...</span>
+      <span class="sr-only">Loading...</span>
     </div>
   );
 };
 
-export default LoadingSpinner;
+export default Loader;

@@ -2,18 +2,18 @@
 import React from "react";
 import SideNav from "@/components/ui/SideNav/SideNav";
 import Header from "@/components/ui/Header/Header";
+import Loader from "@/components/ui/Loader/Loader";
 import { usePathname } from "next/navigation";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { useUser } from "@clerk/nextjs";
-import LoadingSpinner from "@/components/ui/LoadingSpinner/LoadingSpinner";
 
 const layout = ({ children }) => {
   const queryClient = new QueryClient();
   const path = usePathname();
   const { user, isLoaded, isSignedIn } = useUser();
 
-  if (!isSignedIn) {
-    return <LoadingSpinner />;
+  if (!isLoaded) {
+    return <Loader />;
   }
 
   return (
