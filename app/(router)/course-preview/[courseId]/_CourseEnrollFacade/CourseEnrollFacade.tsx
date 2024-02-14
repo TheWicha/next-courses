@@ -3,7 +3,7 @@ import CourseEnrollSection from "@/components/ui/CourseEnrollSection/CourseEnrol
 import useGetCourses from "@/utils/useGetCourses";
 import { useUser } from "@clerk/nextjs";
 import { useGQLMutation } from "@/utils/useGQLMutation";
-import { enrollToCourse } from "@/utils/graphqlQueries";
+import { enrollToCourse } from "@/utils/graphqlMutation";
 
 const CourseEnrollFacade = ({ slug, membership }) => {
   const { user } = useUser();
@@ -27,7 +27,6 @@ const CourseEnrollFacade = ({ slug, membership }) => {
     const mutationData = await createCourseMutation.mutateAsync(
       mutationVariables
     );
-
   };
 
   return (

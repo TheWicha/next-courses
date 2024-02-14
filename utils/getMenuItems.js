@@ -6,8 +6,8 @@ import {
   LayoutDashboard,
 } from "lucide-react";
 
-export const useMenuItems = ({ user }) => {
-  const items = [
+export const getMenuItems = ({ user }) => {
+  return [
     {
       id: 1,
       name: "All Courses",
@@ -44,5 +44,4 @@ export const useMenuItems = ({ user }) => {
       auth: true,
     },
   ];
-  return items;
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { useMenuItems } from "@/utils/useNavItems";
+import { getMenuItems } from "@/utils/getMenuItems";
 import Link from "next/link";
 import { clsx } from "clsx";
 import { NavItemsType } from "./navItemsTypes";
@@ -7,7 +7,7 @@ import { useUser } from "@clerk/nextjs";
 
 const NavItems: React.FC<NavItemsType> = ({ path }) => {
   const { user } = useUser();
-  const menuItems = useMenuItems({ user });
+  const menuItems = getMenuItems({ user });
   const listItems = menuItems.map(
     (item, index) =>
       item.auth && (
