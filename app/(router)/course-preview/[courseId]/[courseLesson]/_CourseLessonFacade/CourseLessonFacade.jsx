@@ -3,7 +3,8 @@ import Skeleton from "@/components/ui/Skeleton/Skeleton";
 import CourseLessonWrapper from "@/components/ui/CourseLessonWrapper/CourseLessonWrapper";
 import CourseLesson from "@/components/ui/CourseLesson/CourseLesson";
 
-const CourseLessonFacade = ({ chapter, chapters }) => {
+const CourseLessonFacade = ({ chapter, chapters, slug }) => {
+  console.log(chapters, "chapters");
   if (!chapter) {
     return (
       <CourseLessonWrapper>
@@ -13,7 +14,7 @@ const CourseLessonFacade = ({ chapter, chapters }) => {
   }
 
   return (
-    <CourseLessonWrapper chapters={chapters} chapter={chapter}>
+    <CourseLessonWrapper chapters={chapters} chapter={chapter} slug={slug}>
       <CourseLesson chapter={chapter} />
     </CourseLessonWrapper>
   );

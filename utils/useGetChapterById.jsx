@@ -1,6 +1,6 @@
 import useGetLessons from "./useGetCourseById";
 
-const useGetLessonById = ({ slug, id }) => {
+const useGetChapterById = ({ slug, id }) => {
   const { data } = useGetLessons({ slug });
 
   function findChapterById(lessons, id) {
@@ -10,4 +10,4 @@ const useGetLessonById = ({ slug, id }) => {
   return findChapterById(data, id);
 };
 
-export default useGetLessonById;
+export default useGetChapterById;

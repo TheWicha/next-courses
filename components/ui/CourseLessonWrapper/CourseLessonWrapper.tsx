@@ -1,12 +1,13 @@
 import React from "react";
 import { CourseLessonWrapperType } from "./CourseLessonWrapperType";
-import CourseEnrollSection from "@/components/ui/CourseEnrollSection/CourseEnrollSection";
 import CourseChaptersList from "../CourseChaptersList/CourseChaptersList";
+import CourseEnrollFacade from "../../../app/(router)/course-preview/[courseId]/_CourseEnrollFacade/CourseEnrollFacade";
 
 const CourseLessonWrapper: React.FC<CourseLessonWrapperType> = ({
   children,
   chapters,
   chapter,
+  slug,
 }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 p-5 gap-3 max-w-[1400px] ">
@@ -14,7 +15,10 @@ const CourseLessonWrapper: React.FC<CourseLessonWrapperType> = ({
         {children}
       </div>
       <div className="flex flex-col gap-3">
-        <CourseEnrollSection membership={true} />
+        <CourseEnrollFacade
+          slug={slug}
+          membership={false}
+        />
         <CourseChaptersList chapters={chapters} chapter={chapter} />
       </div>
     </div>

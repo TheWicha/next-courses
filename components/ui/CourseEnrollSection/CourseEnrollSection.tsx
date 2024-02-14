@@ -4,13 +4,15 @@ import { Button } from "@/components/ui/lib/button";
 import Link from "next/link";
 
 interface CourseEnrollSectionProps {
-  isAvailable: boolean;
+  isCourseAvailable: boolean;
   user: any;
+  handleClick: () => void;
 }
 
 const CourseEnrollSection: React.FC<CourseEnrollSectionProps> = ({
-  isAvailable,
+  isCourseAvailable,
   user,
+  handleClick,
 }) => {
   const button = !user ? (
     <Link href="/sign-in">
@@ -29,8 +31,9 @@ const CourseEnrollSection: React.FC<CourseEnrollSectionProps> = ({
       size="default"
       className="bg-white text-primary hover:bg-slate-100"
       asChild={false}
+      onClick={handleClick}
     >
-      {isAvailable ? copy.member.buttonText : copy.guest.buttonText}
+      {isCourseAvailable ? copy.member.buttonText : copy.guest.buttonText}
     </Button>
   );
 
@@ -39,8 +42,9 @@ const CourseEnrollSection: React.FC<CourseEnrollSectionProps> = ({
       <h2 className="text-[22px] font-bold text-white">{copy.title}</h2>
       <div className="flex flex-col gap-3 mt-3">
         <h2 className="text-white font-light">
-          {isAvailable ? copy.member.description : copy.guest.description}
+          {isCourseAvailable ? copy.member.description : copy.guest.description}
         </h2>
+
         {button}
       </div>
     </div>

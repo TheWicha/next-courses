@@ -17,5 +17,4 @@ interface Lessons {
 
 export interface ChapterListFacadeProps {
   chapters: Lessons;
-  data: string;
 }
