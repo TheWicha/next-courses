@@ -1,7 +1,19 @@
 import React from "react";
-import { copy } from "@/copy/courseEnrollSectionCopy";
+// import { copy } from "@/copy/courseEnrollSectionCopy";
 import { Button } from "@/components/ui/lib/button";
 import Link from "next/link";
+
+export const copy = {
+  title: "Enroll to the course",
+  member: {
+    description: "Enroll now to Start Learning and Unleash Your Creativity",
+    buttonText: "Enroll Now",
+  },
+  guest: {
+    description: "Buy Monthly subscription and get access to all courses",
+    buttonText: "Buy Membership just $2.99",
+  },
+};
 
 interface CourseEnrollSectionProps {
   isCourseAvailable: boolean;
