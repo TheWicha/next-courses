@@ -1,7 +1,8 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const Dashboard = () => {
-  return <div>page</div>;
+  return <div>Dashboard under construction</div>;
 };
 
 export default Dashboard;

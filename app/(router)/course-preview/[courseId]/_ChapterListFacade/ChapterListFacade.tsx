@@ -8,7 +8,10 @@ const ChapterListFacade: React.FC<ChapterListFacadeProps> = ({ chapters }) => {
   return (
     <div className="flex flex-col gap-4 col-span-2 ">
       {lessonsChapters?.map((item, index) => (
-        <div className="border rounded-lg p-4 cursor-pointer gap-2 hover:bg-violet-100 ">
+        <div
+          key={index}
+          className="border rounded-lg p-4 cursor-pointer gap-2 hover:bg-violet-100 "
+        >
           <CoursePreview item={item} index={index} />
         </div>
       ))}

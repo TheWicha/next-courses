@@ -19,7 +19,7 @@ const CourseListFacade = () => {
         coursesNumber={coursesNumber}
       />
     ),
-    [list, filterList]
+    [list, filterList, coursesNumber]
   );
 
   return memoizedCourseList;
