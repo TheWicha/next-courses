@@ -7,9 +7,9 @@ const Header = ({ user }) => {
   const button = user.isSignedIn ? <HeaderButtonLog /> : <HeaderButtonUnlog />;
 
   return (
-    <div className="p-4 bg-white flex justify-between">
-      <div className="flex items-center gap-2 border rounded-sm">
-        <Search className="w-5 h-5" />
+    <div className="p-4 bg-white flex justify-end md:justify-between ">
+      <div className=" items-center gap-2 border rounded-sm md:flex hidden">
+        <Search className="  w-5 h-5 " />
         <input
           className="outline-none"
           type="text"
@@ -18,7 +18,7 @@ const Header = ({ user }) => {
       </div>
       <div className="flex items-center gap-4">
         <BellDot className="text-gray-500" />
-        {button}
+        <div> {button}</div>
       </div>
     </div>
   );
