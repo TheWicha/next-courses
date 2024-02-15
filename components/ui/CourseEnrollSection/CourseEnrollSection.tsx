@@ -1,5 +1,5 @@
 import React from "react";
-import { copy } from "@/copy/courseEnrollSectionCopy";
+import { copy } from "@/copy/courseEnrollCopy";
 import { Button } from "@/components/ui/lib/button";
 import Link from "next/link";
 
