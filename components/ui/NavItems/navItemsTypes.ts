@@ -1,3 +1,4 @@
 export interface NavItemsType {
-    path: string
+  path: string;
+  closeDrawer?: () => void;
 }

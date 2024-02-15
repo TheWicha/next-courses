@@ -6,7 +6,7 @@ import { NavItemsType } from "./sideNavType";
 
 const SideNav: React.FC<NavItemsType> = ({ path }) => {
   return (
-    <div className="p-5 bg-white shadow-sm border h-screen ">
+    <div className="p-5 bg-white shadow-sm border h-screen hidden sm:w-64 fixed sm:block">
       <div className="flex flex-col items-center">
         <Image
           priority
