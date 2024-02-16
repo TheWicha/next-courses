@@ -8,7 +8,6 @@ import { CourseListPropsType } from "./CourseListTypes";
 const CourseList: React.FC<CourseListPropsType> = ({
   courses,
   handleChange,
-  coursesNumber,
 }) => {
   return (
     <div className="p-5 bg-white rounded-lg mt-5">
@@ -31,17 +30,13 @@ const CourseList: React.FC<CourseListPropsType> = ({
         </Select> */}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-        {courses ? (
-          courses?.map((item, index) => (
-            <Link href={`/course-preview/${item.slug}`} key={index}>
-              <div>
-                <CourseListItem course={item} />
-              </div>
-            </Link>
-          ))
-        ) : (
-          <Skeleton numberOfSkeletons={coursesNumber} variant="sm" />
-        )}
+        {courses?.map((item, index) => (
+          <Link href={`/course-preview/${item.slug}`} key={index}>
+            <div>
+              <CourseListItem course={item} />
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );

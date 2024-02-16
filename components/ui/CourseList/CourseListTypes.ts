@@ -18,5 +18,4 @@ export interface CourseType {
 export interface CourseListPropsType {
   courses: CourseType[];
   handleChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-  coursesNumber: number;
 }
