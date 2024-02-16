@@ -1,6 +1,6 @@
 import React from "react";
-import { CourseLessonWrapperType } from "./CourseLessonWrapperType";
-import CourseChaptersList from "../CourseChaptersList/CourseChaptersList";
+import { CourseLessonWrapperType } from "./CourseLessonWrapperTypes";
+import CourseChaptersList from "../CourseChaptersList/";
 import CourseEnrollFacade from "../../../app/(router)/course-preview/[courseId]/_CourseEnrollFacade/CourseEnrollFacade";
 
 const CourseLessonWrapper: React.FC<CourseLessonWrapperType> = ({
@@ -15,10 +15,7 @@ const CourseLessonWrapper: React.FC<CourseLessonWrapperType> = ({
         {children}
       </div>
       <div className="flex flex-col gap-3">
-        <CourseEnrollFacade
-          slug={slug}
-          membership={false}
-        />
+        <CourseEnrollFacade slug={slug} membership={false} />
         <CourseChaptersList chapters={chapters} chapter={chapter} />
       </div>
     </div>

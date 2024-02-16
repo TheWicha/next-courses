@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/lib/accordion";
-import { CoursePreviewType } from "./coursePreviewType";
+import { CoursePreviewType } from "./coursePreviewTypes";
 
 const CoursePreview: React.FC<CoursePreviewType> = ({ item, index }) => {
   return (

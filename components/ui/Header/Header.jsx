@@ -7,7 +7,7 @@ const Header = ({ user, openDrawer }) => {
   const button = user.isSignedIn ? <HeaderButtonLog /> : <HeaderButtonUnlog />;
 
   return (
-    <div className="p-4 bg-white w-full flex justify-between sm:justify-end  md:justify-between sm:ml-64">
+    <div className="p-4 bg-white w-full flex justify-between sm:justify-end  md:justify-between sm:ml-64 cursor-pointer">
       <span onClick={openDrawer} className="[&>svg]:w-7 flex sm:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,8 @@ const Header = ({ user, openDrawer }) => {
         ></input>
       </div>
       <div className="flex items-center gap-4">
-        <BellDot className="text-gray-500" />
+        <BellDot className="text-gray-500 cursor-pointer" />
+
         <div> {button}</div>
       </div>
     </div>

@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import NavItems from "../NavItems/NavItems";
-import { NavItemsType } from "./sideNavType";
+import { NavItemsType } from "./sideNavTypes";
 
 const SideNav: React.FC<NavItemsType> = ({ path }) => {
   return (

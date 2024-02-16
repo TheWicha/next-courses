@@ -1,5 +1,5 @@
 import React from "react";
-import CourseEnrollSection from "@/components/ui/CourseEnrollSection/CourseEnrollSection";
+import CourseEnrollSection from "@/components/ui/CourseEnrollSection/";
 import useGetCourses from "@/utils/useGetCourses";
 import { useUser } from "@clerk/nextjs";
 import { useGQLMutation } from "@/utils/useGQLMutation";

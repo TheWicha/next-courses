@@ -1,8 +1,7 @@
-"use client";
 import React from "react";
 
-const Dashboard = () => {
+const Store = () => {
   return <div>Dashboard page is under construction</div>;
 };
 
-export default Dashboard;
+export default Store;

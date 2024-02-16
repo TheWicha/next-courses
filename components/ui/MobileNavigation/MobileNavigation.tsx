@@ -1,8 +1,12 @@
-import React, { useState } from "react";
-import { Drawer, Button, IconButton, List } from "@material-tailwind/react";
+import React from "react";
+import { Drawer, IconButton, List } from "@material-tailwind/react";
 import NavItems from "@/components/ui/NavItems/NavItems";
 
-const MobileNavigation = ({ path, open, closeDrawer }) => {
+const MobileNavigation: React.FC<MobileNavigationPropsType> = ({
+  path,
+  open,
+  closeDrawer,
+}) => {
   return (
     <React.Fragment>
       <Drawer

@@ -2,12 +2,7 @@ import React from "react";
 import { copy } from "@/copy/courseEnrollCopy";
 import { Button } from "@/components/ui/lib/button";
 import Link from "next/link";
-
-interface CourseEnrollSectionProps {
-  isCourseAvailable: boolean;
-  user: any;
-  handleClick: () => void;
-}
+import { CourseEnrollSectionProps } from "./CourseEnrollSectionTypes";
 
 const CourseEnrollSection: React.FC<CourseEnrollSectionProps> = ({
   isCourseAvailable,

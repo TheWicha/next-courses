@@ -1,6 +1,6 @@
 import React from "react";
 import { clsx } from "clsx";
-import { SkeletonPropsType } from "./skeletonType";
+import { SkeletonPropsType } from "./skeletonTypes";
 
 const Skeleton: React.FC<SkeletonPropsType> = ({
   numberOfSkeletons,
