@@ -5,7 +5,14 @@ import { Button } from "@/components/ui/lib/button";
 const HeaderButtonUnlog = () => {
   return (
     <Link href="/sign-in">
-      <Button>Get Started</Button>
+      <Button
+        variant="default"
+        size="default"
+        className={undefined}
+        asChild={undefined}
+      >
+        Get Started
+      </Button>
     </Link>
   );
 };

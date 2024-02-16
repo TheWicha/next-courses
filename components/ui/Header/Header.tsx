@@ -1,9 +1,10 @@
 import { BellDot, Search } from "lucide-react";
 import React from "react";
-import HeaderButtonLog from "@/components/ui/HeaderButton/HeaderButtonLog";
-import HeaderButtonUnlog from "@/components/ui/HeaderButton/HeaderButtonUnlog";
+import HeaderButtonLog from "@/components/ui/HeaderButtonLog/HeaderButtonLog";
+import HeaderButtonUnlog from "@/components/ui/HeaderButtonUnlog/HeaderButtonUnlog";
+import { HeaderType } from "./HeaderTypes";
 
-const Header = ({ user, openDrawer }) => {
+const Header: React.FC<HeaderType> = ({ user, openDrawer }) => {
   const button = user.isSignedIn ? <HeaderButtonLog /> : <HeaderButtonUnlog />;
 
   return (
@@ -13,7 +14,7 @@ const Header = ({ user, openDrawer }) => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          class="h-7 w-7"
+          className="h-7 w-7"
         >
           <path
             fill-rule="evenodd"

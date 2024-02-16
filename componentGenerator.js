@@ -1,18 +1,30 @@
 const fs = require("fs");
 const path = require("path");
-const chokidar = require("chokidar");
-const componentsDir = "./components/ui/";
-const excludeDirs = ["lib"];
+const readline = require("readline");
 
-const createFiles = (dirPath) => {
-  if (path.resolve(dirPath) === path.resolve(componentsDir)) {
-    return;
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+const componentsDir = "./components/ui/";
+
+rl.question("Please enter the component name: ", (componentName) => {
+  const componentDirPath = path.join(componentsDir, componentName);
+
+  if (!fs.existsSync(componentDirPath)) {
+    fs.mkdirSync(componentDirPath);
+    createFiles(componentDirPath, componentName);
+  } else {
+    console.log(`Component ${componentName} already exists.`);
   }
 
-  const componentName = path.basename(dirPath);
+  rl.close();
+});
+
+const createFiles = (dirPath, componentName) => {
   const indexFilePath = path.join(dirPath, "index.js");
   const componentTsxFilePath = path.join(dirPath, `${componentName}.tsx`);
-  const componentJsxFilePath = path.join(dirPath, `${componentName}.jsx`);
   const typesFilePath = path.join(dirPath, `${componentName}Types.ts`);
 
   const indexFileContent = `import ${componentName} from './${componentName}';\nexport default ${componentName};\n`;
@@ -32,26 +44,13 @@ export interface ${componentName}Type {
 }
 `;
 
-  // Check if files already exist
   if (!fs.existsSync(indexFilePath)) {
     fs.writeFileSync(indexFilePath, indexFileContent);
   }
-  if (
-    !fs.existsSync(componentTsxFilePath) &&
-    !fs.existsSync(componentJsxFilePath)
-  ) {
+  if (!fs.existsSync(componentTsxFilePath)) {
     fs.writeFileSync(componentTsxFilePath, componentFileContent);
   }
   if (!fs.existsSync(typesFilePath)) {
     fs.writeFileSync(typesFilePath, typesFileContent);
   }
 };
-
-// Initialize watcher
-const watcher = chokidar.watch(componentsDir, {
-  ignored: excludeDirs.map((dir) => `${componentsDir}${dir}/**`),
-  depth: 1, // Only watch direct child directories
-});
-
-// On directory add event
-watcher.on("addDir", createFiles);

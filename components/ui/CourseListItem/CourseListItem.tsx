@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import useTrimmedText from "../../../utils/useTrimText";
-import { CourseItemType } from "./courseItemType";
+import { CourseItemType } from "./CourseListItemTypes";
 
 const CourseListItem: React.FC<CourseItemType> = ({ course }) => {
   const trimmedText = useTrimmedText({

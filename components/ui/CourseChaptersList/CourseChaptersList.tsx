@@ -1,7 +1,7 @@
 import React from "react";
 import { clsx } from "clsx";
 import Link from "next/link";
-import { CourseChaptersListType } from "./CourseChapterListTypes";
+import { CourseChaptersListType } from "./CourseChaptersListTypes";
 import Skeleton from "../Skeleton/Skeleton";
 import { Lock, Play } from "lucide-react";
 
