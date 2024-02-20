@@ -7,7 +7,7 @@ import VideoPlayer from "@/components/ui/VideoPlayer";
 
 const CoursePreview = ({ params }) => {
   const { data } = useGetLesson({ slug: params.courseId });
-  console.log(data?.list.videoAbout.url, "data");
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 p-5 gap-3 mx-auto max-w-[1400px]">
       <div className="md:order-2">
