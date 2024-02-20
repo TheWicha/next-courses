@@ -4,7 +4,7 @@ export const useInterpolateText = (text, className) => {
 
   const word = match.input.replace(
     match[0],
-    `<span className="${className}">${match[1]}</span>`
+    `<span class="${className}">${match[1]}</span>`
   );
   return <span dangerouslySetInnerHTML={{ __html: word }}></span>;
 };
