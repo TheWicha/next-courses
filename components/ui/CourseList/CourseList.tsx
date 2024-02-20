@@ -28,12 +28,10 @@ const CourseList: React.FC<CourseListPropsType> = ({
           </SelectContent>
         </Select> */}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
         {courses?.map((item, index) => (
           <Link href={`/course-preview/${item.slug}`} key={index}>
-            <div>
-              <CourseListItem course={item} />
-            </div>
+            <CourseListItem course={item} />
           </Link>
         ))}
       </div>
