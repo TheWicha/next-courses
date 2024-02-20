@@ -8,7 +8,7 @@ const ChapterListFacade: React.FC<ChapterListFacadeProps> = ({ chapters }) => {
   const coursePreviews = useMemo(
     () =>
       lessonChapters?.map((item, index) => (
-        <div key={index} className="border rounded-lg gap-2 bg-violet-100 ">
+        <div key={index} className="border rounded-lg gap-4 ">
           <CoursePreview item={item} index={index} />
         </div>
       )),
@@ -16,7 +16,7 @@ const ChapterListFacade: React.FC<ChapterListFacadeProps> = ({ chapters }) => {
   );
 
   return (
-    <div className="flex flex-col gap-4 col-span-2 ">{coursePreviews}</div>
+    <div className="flex flex-col gap-1 col-span-2 ">{coursePreviews}</div>
   );
 };
 
