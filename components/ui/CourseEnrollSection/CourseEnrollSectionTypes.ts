@@ -1,5 +1,6 @@
 export interface CourseEnrollSectionProps {
-  isCourseAvailable: boolean;
-  user: any;
-  handleClick: () => void;
+  content: {
+    button: React.ReactNode;
+    description: string;
+  };
 }

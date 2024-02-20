@@ -1,5 +1,47 @@
 import { gql } from "graphql-request";
 
+export const checkIfUserEnrolled = gql`
+  query checkIfUserEnrolled($courseId: String!, $userEmail: String!) {
+    userEnrollCourses(where: { userEmail: $userEmail, courseId: $courseId }) {
+      id
+    }
+  }
+`;
+
+export const getUserEnrolledCourseDetails = gql`
+  query userEnrolledCourseDetails($id: ID!, $userEmail: String!) {
+    userEnrollCourses(where: { id: $id, userEmail: $userEmail }) {
+      courseId
+      id
+      userEmail
+      list {
+        author
+        banner {
+          url
+        }
+        chapter {
+          ... on Chapter {
+            id
+            name
+            shortDesc
+            video {
+              url
+            }
+          }
+        }
+        description
+        demoUr
+        free
+        id
+        name
+        slug
+        sourceCode
+        totalChapters
+      }
+    }
+  }
+`;
+
 export const coursesById = gql`
   query courseById($slug: String!) {
     list(where: { slug: $slug }) {

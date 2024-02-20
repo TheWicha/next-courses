@@ -4,7 +4,6 @@ import CourseLessonWrapper from "@/components/ui/CourseLessonWrapper/CourseLesso
 import CourseLesson from "@/components/ui/CourseLesson/CourseLesson";
 
 const CourseLessonFacade = ({ chapter, chapters, slug }) => {
-  console.log(chapters, "chapters");
   if (!chapter) {
     return (
       <CourseLessonWrapper>

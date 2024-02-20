@@ -9,7 +9,7 @@ export default function Home() {
   const router = useRouter();
   const { user } = useUser();
   useEffect(() => {
-    user ? router.push("dashboard") : null;
+    user && router.push("dashboard");
   });
   return (
     <div>
