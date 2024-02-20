@@ -11,8 +11,9 @@ const useIsEnrolledToCourse = ({ courseId, userEmail }) => {
       userEmail,
     }
   );
+  const isUserEnrolled = data;
 
-  return useMemo(() => ({ data, error }), [data, error]);
+  return useMemo(() => ({ isUserEnrolled, error }), [data, error]);
 };
 
 export default useIsEnrolledToCourse;

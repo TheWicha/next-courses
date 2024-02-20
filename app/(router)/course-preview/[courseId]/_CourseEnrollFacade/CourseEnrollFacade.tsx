@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import useIsEnrolledToCourse from "@/utils/useIsEnrolledToCourse";
 import useGetEnrollContent from "@/utils/useGetEnrollContent";
+import { toastCopy } from "@/copy/toastsCopy";
 
 const CourseEnrollFacade = ({ slug, membership }) => {
   const { user } = useUser();
@@ -25,7 +26,7 @@ const CourseEnrollFacade = ({ slug, membership }) => {
     userEmail: user?.primaryEmailAddress.emailAddress,
   };
 
-  const { data: isUserEnrolled } = useIsEnrolledToCourse(mutationVariables);
+  const { isUserEnrolled } = useIsEnrolledToCourse(mutationVariables);
 
   const handleEnroll = async () => {
     if (!isCourseAvailable) {
@@ -37,7 +38,7 @@ const CourseEnrollFacade = ({ slug, membership }) => {
     if (mutationData) {
       router.push(`/watch-course/${mutationData.createUserEnrollCourse.id}`);
 
-      toast("You have been successfully enrolled in the course.");
+      toast(toastCopy.enrolled);
     }
   };
 
