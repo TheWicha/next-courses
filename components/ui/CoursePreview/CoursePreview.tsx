@@ -9,14 +9,14 @@ import {
 
 const CoursePreview: React.FC<CoursePreviewType> = ({ item }) => {
   return (
-    <div className="flex rounded-t-lg p-2">
+    <div className="rounded-t-lg">
       <Accordion type="single" collapsible>
         <AccordionItem value={item.name}>
-          <AccordionTrigger>
+          <AccordionTrigger className="bg-violet-100 p-3">
             <span className="font-semibold"> {item.name}</span>
           </AccordionTrigger>
           <AccordionContent className=" mt-4">
-            <div>{item.shortDesc}</div>
+            <div className="p-2">{item.shortDesc}</div>
           </AccordionContent>
         </AccordionItem>
       </Accordion>
