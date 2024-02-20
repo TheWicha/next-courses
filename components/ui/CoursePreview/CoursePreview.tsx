@@ -1,13 +1,25 @@
 import React from "react";
 import { CoursePreviewType } from "./coursePreviewTypes";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/lib/accordion";
 
 const CoursePreview: React.FC<CoursePreviewType> = ({ item }) => {
   return (
-    <div>
-      <div className="flex mb-2 bg-slate-100 rounded-t-lg p-2">
-        <span className="font-semibold "> {item.name}</span>
-      </div>
-      <div className="p-4">{item.shortDesc}</div>
+    <div className="flex rounded-t-lg p-2">
+      <Accordion type="single" collapsible>
+        <AccordionItem value={item.name}>
+          <AccordionTrigger>
+            <span className="font-semibold"> {item.name}</span>
+          </AccordionTrigger>
+          <AccordionContent className=" mt-4">
+            <div>{item.shortDesc}</div>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
     </div>
   );
 };
