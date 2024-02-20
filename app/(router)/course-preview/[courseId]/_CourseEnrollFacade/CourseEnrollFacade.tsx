@@ -25,7 +25,7 @@ const CourseEnrollFacade = ({ slug, membership }) => {
     slug: course?.slug,
     userEmail: user?.primaryEmailAddress.emailAddress,
   };
-
+  console.log(slug, "slug");
   const { isUserEnrolled } = useIsEnrolledToCourse(mutationVariables);
 
   const handleEnroll = async () => {

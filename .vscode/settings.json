@@ -3,6 +3,7 @@
         "clsx",
         "lucide",
         "Sonner",
+        "tailwindcss",
         "Unlog"
     ]
 }
