@@ -8,9 +8,9 @@ import {
 } from "@/components/ui/lib/accordion";
 
 const CoursePreview: React.FC<CoursePreviewType> = ({ item }) => {
-  console.log(item);
   return (
     <div className="flex rounded-t-lg p-2">
+     {console.log(item)} 
       <Accordion type="single" collapsible>
         <AccordionItem value={item.name}>
           <AccordionTrigger>
