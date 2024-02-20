@@ -2,10 +2,10 @@
 import React from "react";
 import useGetChapterById from "@/utils/useGetChapterById";
 import CourseLessonFacade from "./_CourseLessonFacade/CourseLessonFacade";
-import useGetLessons from "@/utils/useGetCourseById";
+import useGetLesson from "@/utils/useGetCourseById";
 
 const CourseChapterPreview = ({ params }) => {
-  const { data } = useGetLessons({ slug: params.courseId });
+  const { data } = useGetLesson({ slug: params.courseId });
   const chapter = useGetChapterById({
     slug: params.courseId,
     id: params.courseLesson,

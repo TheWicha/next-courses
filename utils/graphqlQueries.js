@@ -49,6 +49,7 @@ export const coursesById = gql`
       banner {
         url
       }
+      description
       chapter {
         ... on Chapter {
           id

@@ -2,7 +2,6 @@
 import Link from "next/link";
 import React from "react";
 import CourseListItem from "../CourseListItem/CourseListItem";
-import Skeleton from "../Skeleton/Skeleton";
 import { CourseListPropsType } from "./CourseListTypes";
 
 const CourseList: React.FC<CourseListPropsType> = ({
@@ -12,7 +11,7 @@ const CourseList: React.FC<CourseListPropsType> = ({
   return (
     <div className="p-5 bg-white rounded-lg mt-5">
       <div className="flex items-center justify-between">
-        <h2 className="text-[20px] font-bold text-primary funny">Courses</h2>
+        <h2 className="text-[20px] font-bold text-primary">Courses</h2>
         <select name="courses" onChange={handleChange} className="m-1">
           <option value="all">All Courses</option>
           <option value="paid">Paid Courses</option>

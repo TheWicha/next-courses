@@ -1,7 +1,7 @@
-import useGetLessons from "./useGetCourseById";
+import useGetLesson from "./useGetCourseById";
 
 const useGetChapterById = ({ slug, id }) => {
-  const { data } = useGetLessons({ slug });
+  const { data } = useGetLesson({ slug });
 
   function findChapterById(lessons, id) {
     return lessons?.list?.chapter?.find((chapter) => chapter.id === id);

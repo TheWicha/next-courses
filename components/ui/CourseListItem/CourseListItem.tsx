@@ -6,7 +6,7 @@ import { CourseItemType } from "./CourseListItemTypes";
 const CourseListItem: React.FC<CourseItemType> = ({ course }) => {
   const trimmedText = useTrimmedText({
     text: course?.description,
-    maxLength: 120,
+    maxLength: 200,
   });
 
   return (
@@ -21,7 +21,9 @@ const CourseListItem: React.FC<CourseItemType> = ({ course }) => {
         />
       </div>
       <div className="flex flex-col gap-2 p-2">
-        <h2 className="font-semibold text-[14px]">{course?.name}</h2>
+        <h2 className="font-semiboldtext-[12px] lg:text-[14px]">
+          {course?.name}
+        </h2>
         <h2 className="text-[15px] font-medium">
           {course?.free ? (
             <div className="flex text-green-700">
