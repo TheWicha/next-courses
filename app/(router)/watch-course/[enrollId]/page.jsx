@@ -1,15 +1,9 @@
 "use client";
 import React from "react";
-import useGetUserEnrolledCourseDetails from "@/utils/useGetUserEnrolledCourse";
-import { useUser } from "@clerk/nextjs";
 import CourseLessonFacade from "../_CourseLessonFacade/CourseLessonFacade";
 
 const WatchCourse = ({ params }) => {
-  return (
-    <div>
-      <CourseLessonFacade id={params?.enrollId} />
-    </div>
-  );
+  return <CourseLessonFacade id={params?.enrollId} />;
 };
 
 export default WatchCourse;
