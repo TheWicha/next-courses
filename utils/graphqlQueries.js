@@ -62,6 +62,9 @@ export const coursesById = gql`
           slug
         }
       }
+      videoAbout {
+        url
+      }
     }
   }
 `;

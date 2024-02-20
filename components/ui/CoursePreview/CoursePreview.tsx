@@ -1,7 +1,7 @@
 import React from "react";
 import { CoursePreviewType } from "./coursePreviewTypes";
 
-const CoursePreview: React.FC<CoursePreviewType> = ({ item, index }) => {
+const CoursePreview: React.FC<CoursePreviewType> = ({ item }) => {
   return (
     <div>
       <div className="flex mb-2 bg-slate-100 rounded-t-lg p-2">
