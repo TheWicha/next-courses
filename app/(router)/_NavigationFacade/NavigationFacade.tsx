@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import SideNav from "@/components/ui/SideNav/SideNav";
 import MobileNavigation from "@/components/ui/MobileNavigation/MobileNavigation";
 import Header from "@/components/ui/Header/Header";
-import Loader from "@/components/ui/Loader/Loader";
+
 import { useUser } from "@clerk/nextjs";
 
 const NavigationFacade = () => {
@@ -13,9 +13,6 @@ const NavigationFacade = () => {
   const openDrawer = () => setOpen(true);
   const closeDrawer = () => setOpen(false);
 
-  if (!isLoaded) {
-    return <Loader />;
-  }
 
   return (
     <div className="flex ">
