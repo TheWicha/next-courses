@@ -3,7 +3,6 @@ import { usePathname } from "next/navigation";
 import SideNav from "@/components/ui/SideNav/SideNav";
 import MobileNavigation from "@/components/ui/MobileNavigation/MobileNavigation";
 import Header from "@/components/ui/Header/Header";
-
 import { useUser } from "@clerk/nextjs";
 
 const NavigationFacade = () => {
