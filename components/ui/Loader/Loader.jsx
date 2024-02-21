@@ -1,6 +1,13 @@
 import React from "react";
+import { useUser } from "@clerk/nextjs";
 
 const Loader = () => {
+  const { isLoaded } = useUser();
+
+  if (isLoaded) {
+    return;
+  }
+
   return (
     <div role="status" className="flex h-screen justify-center items-center">
       <svg

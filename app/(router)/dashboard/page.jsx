@@ -1,8 +1,8 @@
 "use client";
-import React from "react";
+
 
 const Dashboard = () => {
-  return <div>Dashboard page is under construction</div>;
+  return <div>Dashboard is under development</div>;
 };
 
 export default Dashboard;
