@@ -38,7 +38,8 @@ const nextConfig = {
         rule.use.forEach((moduleLoader) => {
           if (
             moduleLoader.loader?.includes("css-loader") &&
-            !moduleLoader.loader?.includes("postcss-loader")
+            !moduleLoader.loader?.includes("postcss-loader") &&
+            moduleLoader.options.modules
           ) {
             moduleLoader.options.modules.getLocalIdent = hashOnlyIdent;
           }
