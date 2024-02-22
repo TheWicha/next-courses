@@ -350,12 +350,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <a
-          href="https://www.freepik.com/free-photos-vectors/background"
-          className="text-gray-500"
-        >
-          Background vector created by freepik - www.freepik.com
-        </a>
       </footer>
     </div>
   );
