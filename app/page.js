@@ -1,23 +1,19 @@
 "use client";
-import { useEffect } from "react";
+
 import { Button } from "@/components/ui/lib/button";
 import { useUser } from "@clerk/nextjs";
-import { useRouter } from "next/navigation";
+
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
-  const router = useRouter();
-  const { user } = useUser();
-  useEffect(() => {
-    user && router.push("dashboard");
-  });
+  const { user, isLoaded } = useUser();
 
   return (
     <div>
       <nav
         id="header"
-        className="fixed w-full z-30 top-0 text-white bg-violet-800"
+        className="fixed w-full z-50 top-0 text-white bg-violet-800"
       >
         <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
           <div className="pl-4 flex items-center">
@@ -29,18 +25,36 @@ export default function Home() {
             </a>
           </div>
           <div
-            className=" flex-grow flex items-center w-auto mt-2 :mt-0 bg-white bg-transparent text-black p-4 :p-0 z-20"
+            className=" flex-grow flex items-center w-auto mt-2 :mt-0 bg-white bg-transparent text-black p-4 :p-0"
             id="nav-content"
           >
             <div className="list-reset flex justify-end flex-1 items-center">
-              <Link href="sign-in">
+              {isLoaded ? (
+                user ? (
+                  <Link href="courses">
+                    <Button
+                      id="navAction"
+                      className="mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out hover:text-white"
+                    >
+                      Continue
+                    </Button>
+                  </Link>
+                ) : (
+                  <Link href="sign-in">
+                    <Button
+                      id="navAction"
+                      className="mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out hover:text-white"
+                    >
+                      Sign In
+                    </Button>
+                  </Link>
+                )
+              ) : (
                 <Button
                   id="navAction"
-                  className="mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-                >
-                  Sign In
-                </Button>
-              </Link>
+                  className="mx-0 w-[130px] hover:underline bg-white text-gray-800 font-bold rounded-full mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+                ></Button>
+              )}
             </div>
           </div>
         </div>
@@ -57,13 +71,13 @@ export default function Home() {
               Sub-hero message, not too long and not too short. Make it just
               right!
             </p>
-            <Button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            <Button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out hover:text-white">
               Subscribe
             </Button>
           </div>
 
           <div className="w-full flex md:w-3/5 py-6 text-center md:justify-end">
-            <img className="w-1/2 h-1/2 z-50" src="hero.svg" />
+            <img className="w-1/2 h-1/2" src="hero.svg" />
           </div>
         </div>
       </div>
