@@ -25,7 +25,7 @@ export default function Home() {
             </a>
           </div>
           <div
-            className=" flex-grow flex items-center w-auto mt-2 :mt-0 bg-white bg-transparent text-black p-4 :p-0"
+            className=" flex-grow flex items-center w-auto mt-2 :mt-0  text-black p-4 :p-0"
             id="nav-content"
           >
             <div className="list-reset flex justify-end flex-1 items-center">
