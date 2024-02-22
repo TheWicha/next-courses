@@ -84,16 +84,16 @@
                 />
                 <path
                   d="m172 133.75h268v434h-247.58a20.42 20.42 0 0 1 -20.42 -20.42v-413.58z"
-                  fill="#ff6347"
+                  fill="#5b21b6"
                 />
                 <path
                   transform="translate(-11.5 -150.75)"
                   d="M1017,282.42V294H183V282.42A20.42,20.42,0,0,1,203.42,262H996.58A20.42,20.42,0,0,1,1017,282.42Z"
                   fill="#3f3d56"
                 />
-                <circle cx="193" cy="127.75" r="6" fill="#ff6347" />
-                <circle cx="208" cy="127.75" r="6" fill="#ff6347" />
-                <circle cx="223" cy="127.75" r="6" fill="#ff6347" />
+                <circle cx="193" cy="127.75" r="6" fill="#5b21b6" />
+                <circle cx="208" cy="127.75" r="6" fill="#5b21b6" />
+                <circle cx="223" cy="127.75" r="6" fill="#5b21b6" />
                 <path
                   transform="translate(-11.5 -150.75)"
                   d="M387.5,490A66.5,66.5,0,1,1,321,423.5,66.47,66.47,0,0,1,387.5,490Z"
@@ -164,7 +164,7 @@
                   width="347"
                   height="11"
                   rx="1.24"
-                  fill="#ff6347"
+                  fill="#5b21b6"
                   opacity=".3"
                 />
                 <rect
@@ -173,7 +173,7 @@
                   width="347"
                   height="11"
                   rx="1.24"
-                  fill="#ff6347"
+                  fill="#5b21b6"
                   opacity=".3"
                 />
                 <rect
@@ -182,7 +182,7 @@
                   width="73"
                   height="25"
                   rx="1.24"
-                  fill="#ff6347"
+                  fill="#5b21b6"
                 />
                 <rect
                   x="878"
@@ -190,7 +190,7 @@
                   width="73"
                   height="25"
                   rx="1.24"
-                  fill="#ff6347"
+                  fill="#5b21b6"
                 />
                 <path
                   transform="translate(-11.5 -150.75)"
