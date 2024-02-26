@@ -1,14 +1,10 @@
-"use client";
-
 import { Button } from "@/components/ui/lib/button";
-import { useUser } from "@clerk/nextjs";
-
 import Link from "next/link";
 import Image from "next/image";
+import { currentUser } from "@clerk/nextjs";
 
-export default function Home() {
-  const { user, isLoaded } = useUser();
-
+export default async function Home() {
+  const user = await currentUser();
   return (
     <div>
       <nav
@@ -18,7 +14,7 @@ export default function Home() {
         <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
           <div className="pl-4 flex items-center">
             <a
-              className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+              className="toggleColor text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
               href="#"
             >
               ACADEMY
@@ -29,31 +25,24 @@ export default function Home() {
             id="nav-content"
           >
             <div className="list-reset flex justify-end flex-1 items-center">
-              {isLoaded ? (
-                user ? (
-                  <Link href="courses">
-                    <Button
-                      id="navAction"
-                      className="mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out hover:text-white"
-                    >
-                      Continue
-                    </Button>
-                  </Link>
-                ) : (
-                  <Link href="sign-in">
-                    <Button
-                      id="navAction"
-                      className="mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out hover:text-white"
-                    >
-                      Sign In
-                    </Button>
-                  </Link>
-                )
+              {user ? (
+                <Link href="courses">
+                  <Button
+                    id="navAction"
+                    className="mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out hover:text-white"
+                  >
+                    Continue
+                  </Button>
+                </Link>
               ) : (
-                <Button
-                  id="navAction"
-                  className="mx-0 w-[130px] hover:underline bg-white text-gray-800 font-bold rounded-full mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-                ></Button>
+                <Link href="sign-in">
+                  <Button
+                    id="navAction"
+                    className="mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out hover:text-white"
+                  >
+                    Sign In
+                  </Button>
+                </Link>
               )}
             </div>
           </div>
@@ -62,7 +51,7 @@ export default function Home() {
       </nav>
 
       <div className="pt-24">
-        <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center ">
+        <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center justify-between ">
           <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
             <h1 className="my-4 text-5xl font-bold leading-tight">
               Join Photography Academy
@@ -76,8 +65,8 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="w-full flex md:w-3/5 py-6 text-center md:justify-end">
-            <img className="w-1/2 h-1/2" src="hero.svg" />
+          <div className="flex w-3/5 md:w-2/5 py-6 text-center justify-end">
+            <img src="hero.svg" />
           </div>
         </div>
       </div>
