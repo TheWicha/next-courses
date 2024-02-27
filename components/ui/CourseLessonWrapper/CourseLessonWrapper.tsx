@@ -1,6 +1,5 @@
 import React from "react";
 import { CourseLessonWrapperType } from "./CourseLessonWrapperTypes";
-import CourseChaptersList from "../CourseChaptersList/";
 import CourseEnrollFacade from "../../../app/(router)/course-preview/[courseId]/_CourseEnrollFacade/CourseEnrollFacade";
 
 const CourseLessonWrapper: React.FC<CourseLessonWrapperType> = ({

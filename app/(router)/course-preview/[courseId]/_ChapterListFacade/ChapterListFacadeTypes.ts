@@ -16,5 +16,5 @@ interface Lessons {
 }
 
 export interface ChapterListFacadeProps {
-  chapters: Lessons;
+  chapters: Lessons["lessons"]["chapter"];
 }

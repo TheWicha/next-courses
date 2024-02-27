@@ -17,12 +17,11 @@ const CoursePreview = ({ params }) => {
         <div>
           <VideoPlayer videoUrl={data?.list.videoAbout.url} poster="" />
         </div>
-
         <h2 className="text-[20px] font-bold text-primary py-4">
           Course content:
         </h2>
 
-        <ChapterListFacade chapters={data?.list} />
+        <ChapterListFacade chapters={data?.list.chapter} />
       </div>
       <div className="col-span-2 bg-white p-3 rounded-xl md:order-3">
         <h2 className="text-[20px] font-bold text-primary py-4">Description</h2>

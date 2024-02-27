@@ -3,11 +3,9 @@ import CoursePreview from "@/components/ui/CoursePreview/CoursePreview";
 import { ChapterListFacadeProps } from "./ChapterListFacadeTypes";
 
 const ChapterListFacade: React.FC<ChapterListFacadeProps> = ({ chapters }) => {
-  const lessonChapters = chapters?.chapter;
-
   return (
     <div className="flex flex-col gap-1 col-span-2 ">
-      {lessonChapters?.map((item, index) => (
+      {chapters?.map((item, index) => (
         <div key={index} className="border rounded-lg gap-4 ">
           <CoursePreview item={item} index={index} />
         </div>

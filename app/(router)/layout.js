@@ -5,7 +5,7 @@ import NavigationFacade from "./_NavigationFacade/NavigationFacade";
 import Loader from "@/components/ui/Loader/Loader";
 const layout = ({ children }) => {
   const queryClient = new QueryClient();
- 
+
   return (
     <QueryClientProvider client={queryClient}>
       <Loader />

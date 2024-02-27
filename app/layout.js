@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <head>
           <link rel="icon" href="/images/favicon.ico" />
         </head>
-        <body className={inter.className}>
+        <body suppressHydrationWarning={true} className={inter.className}>
           <main>{children}</main>
           <Toaster />
         </body>

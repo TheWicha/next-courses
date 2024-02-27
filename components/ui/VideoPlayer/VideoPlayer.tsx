@@ -9,6 +9,7 @@ const VideoPlayer: React.FC<VideoPlayerType> = ({ videoUrl }) => {
   return (
     videoUrl && (
       <video
+        key={videoUrl}
         width={1000}
         height={250}
         controls

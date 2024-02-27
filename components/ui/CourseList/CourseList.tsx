@@ -17,16 +17,6 @@ const CourseList: React.FC<CourseListPropsType> = ({
           <option value="paid">Paid Courses</option>
           <option value="free">Free Courses</option>
         </select>
-        {/* <Select>
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Courses" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">All Courses</SelectItem>
-            <SelectItem value="paid">Paid Courses</SelectItem>
-            <SelectItem value="free">Free Courses</SelectItem>
-          </SelectContent>
-        </Select> */}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 mt-4">
         {courses?.map((item, index) => (

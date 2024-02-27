@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, memo } from "react";
 import { usePathname } from "next/navigation";
 import SideNav from "@/components/ui/SideNav/SideNav";

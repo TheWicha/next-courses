@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import { getUserEnrolledCourseDetails } from "./graphqlQueries";
 import { useGQLQuery } from "./useGQLQuery";
 
@@ -12,7 +11,7 @@ const useGetUserEnrolledCourseDetails = ({ id, userEmail }) => {
     }
   );
 
-  return useMemo(() => ({ data, error }), [data, error]);
+  return { data, error };
 };
 
 export default useGetUserEnrolledCourseDetails;
