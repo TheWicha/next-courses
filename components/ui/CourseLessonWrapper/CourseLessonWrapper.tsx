@@ -16,7 +16,6 @@ const CourseLessonWrapper: React.FC<CourseLessonWrapperType> = ({
       </div>
       <div className="flex flex-col gap-3">
         <CourseEnrollFacade slug={slug} membership={false} />
-        <CourseChaptersList chapters={chapters} chapter={chapter} />
       </div>
     </div>
   );

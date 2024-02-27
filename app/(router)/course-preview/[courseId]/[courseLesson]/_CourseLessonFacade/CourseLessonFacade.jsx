@@ -1,17 +1,8 @@
-import React from "react";
-import Skeleton from "@/components/ui/Skeleton/Skeleton";
+import React, { memo } from "react";
 import CourseLessonWrapper from "@/components/ui/CourseLessonWrapper/CourseLessonWrapper";
 import CourseLesson from "@/components/ui/CourseLesson/CourseLesson";
 
 const CourseLessonFacade = ({ chapter, chapters, slug }) => {
-  if (!chapter) {
-    return (
-      <CourseLessonWrapper>
-        <Skeleton numberOfSkeletons={1} variant="big" />
-      </CourseLessonWrapper>
-    );
-  }
-
   return (
     <CourseLessonWrapper chapters={chapters} chapter={chapter} slug={slug}>
       <CourseLesson chapter={chapter} />
@@ -19,4 +10,4 @@ const CourseLessonFacade = ({ chapter, chapters, slug }) => {
   );
 };
 
-export default CourseLessonFacade;
+export default memo(CourseLessonFacade);

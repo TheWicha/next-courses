@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { getMenuItems } from "@/utils/getMenuItems";
 import Link from "next/link";
 import { clsx } from "clsx";
@@ -29,4 +29,4 @@ const NavItems: React.FC<NavItemsType> = ({ path, closeDrawer }) => {
   return listItems;
 };
 
-export default NavItems;
+export default memo(NavItems);

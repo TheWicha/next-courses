@@ -1,5 +1,5 @@
 import { BellDot, Search } from "lucide-react";
-import React from "react";
+import React, { memo } from "react";
 import HeaderButtonLog from "@/components/ui/HeaderButtonLog/HeaderButtonLog";
 import HeaderButtonUnlog from "@/components/ui/HeaderButtonUnlog/HeaderButtonUnlog";
 import { HeaderType } from "./HeaderTypes";
@@ -40,4 +40,4 @@ const Header: React.FC<HeaderType> = ({ user, openDrawer }) => {
   );
 };
 
-export default Header;
+export default memo(Header);

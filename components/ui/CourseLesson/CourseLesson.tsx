@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import Image from "next/image";
 import { CourseLessonType } from "./CourseLessonTypes";
 
@@ -21,4 +21,4 @@ const CourseLesson: React.FC<CourseLessonType> = ({ chapter }) => {
   );
 };
 
-export default CourseLesson;
+export default memo(CourseLesson);

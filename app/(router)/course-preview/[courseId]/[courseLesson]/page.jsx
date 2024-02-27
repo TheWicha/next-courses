@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { memo } from "react";
 import useGetChapterById from "@/utils/useGetChapterById";
 import CourseLessonFacade from "./_CourseLessonFacade/CourseLessonFacade";
 import useGetLesson from "@/utils/useGetCourseById";
@@ -20,4 +20,4 @@ const CourseChapterPreview = ({ params }) => {
   );
 };
 
-export default CourseChapterPreview;
+export default memo(CourseChapterPreview);

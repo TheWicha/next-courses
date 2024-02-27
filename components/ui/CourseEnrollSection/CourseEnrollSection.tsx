@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { CourseEnrollSectionProps } from "./CourseEnrollSectionTypes";
 
 const CourseEnrollSection: React.FC<CourseEnrollSectionProps> = ({
@@ -14,4 +14,4 @@ const CourseEnrollSection: React.FC<CourseEnrollSectionProps> = ({
   );
 };
 
-export default CourseEnrollSection;
+export default memo(CourseEnrollSection);

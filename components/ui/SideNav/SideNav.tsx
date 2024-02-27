@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { memo } from "react";
 import Image from "next/image";
 import NavItems from "../NavItems/NavItems";
 import { NavItemsType } from "./sideNavTypes";
@@ -24,4 +24,4 @@ const SideNav: React.FC<NavItemsType> = ({ path }) => {
   );
 };
 
-export default SideNav;
+export default memo(SideNav);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Drawer, IconButton, List } from "@material-tailwind/react";
 import NavItems from "@/components/ui/NavItems/NavItems";
 
@@ -47,4 +47,4 @@ const MobileNavigation: React.FC<MobileNavigationPropsType> = ({
   );
 };
 
-export default MobileNavigation;
+export default memo(MobileNavigation);

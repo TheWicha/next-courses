@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { VideoPlayerType } from "./VideoPlayerTypes";
 
 const VideoPlayer: React.FC<VideoPlayerType> = ({ videoUrl }) => {
@@ -22,4 +22,4 @@ const VideoPlayer: React.FC<VideoPlayerType> = ({ videoUrl }) => {
   );
 };
 
-export default VideoPlayer;
+export default memo(VideoPlayer);

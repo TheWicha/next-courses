@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { useUser } from "@clerk/nextjs";
 
 const Loader = () => {
@@ -31,4 +31,4 @@ const Loader = () => {
   );
 };
 
-export default Loader;
+export default memo(Loader);

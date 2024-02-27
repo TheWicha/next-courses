@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { memo } from "react";
 import useGetUserEnrolledCourseDetails from "@/utils/useGetUserEnrolledCourse";
 import { useUser } from "@clerk/nextjs";
 
@@ -16,4 +16,4 @@ const CourseLessonFacade = ({ id }) => {
   return <div>watch course</div>;
 };
 
-export default CourseLessonFacade;
+export default memo(CourseLessonFacade);

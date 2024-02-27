@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { memo } from "react";
 import CourseEnrollSection from "@/components/ui/CourseEnrollSection/";
 import useGetCourses from "@/utils/useGetCourses";
 import { useUser } from "@clerk/nextjs";
@@ -25,7 +25,7 @@ const CourseEnrollFacade = ({ slug, membership }) => {
     slug: course?.slug,
     userEmail: user?.primaryEmailAddress.emailAddress,
   };
- 
+
   const { isUserEnrolled } = useIsEnrolledToCourse(mutationVariables);
 
   const handleEnroll = async () => {
@@ -57,4 +57,4 @@ const CourseEnrollFacade = ({ slug, membership }) => {
   return <CourseEnrollSection content={{ button, description }} />;
 };
 
-export default CourseEnrollFacade;
+export default memo(CourseEnrollFacade);

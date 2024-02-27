@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { clsx } from "clsx";
 import Link from "next/link";
 import { CourseChaptersListType } from "./CourseChaptersListTypes";
@@ -43,4 +43,4 @@ const CourseChaptersList: React.FC<CourseChaptersListType> = ({
   );
 };
 
-export default CourseChaptersList;
+export default memo(CourseChaptersList);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import { usePathname } from "next/navigation";
 import SideNav from "@/components/ui/SideNav/SideNav";
 import MobileNavigation from "@/components/ui/MobileNavigation/MobileNavigation";
@@ -12,7 +12,6 @@ const NavigationFacade = () => {
   const openDrawer = () => setOpen(true);
   const closeDrawer = () => setOpen(false);
 
-
   return (
     <div className="flex ">
       <Header user={{ isLoaded, isSignedIn }} openDrawer={openDrawer} />
@@ -22,4 +21,4 @@ const NavigationFacade = () => {
   );
 };
 
-export default NavigationFacade;
+export default memo(NavigationFacade);
